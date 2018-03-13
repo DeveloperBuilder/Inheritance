@@ -11,7 +11,9 @@ namespace Inheritance
         static void Main(string[] args)
         {
             BMW bmw = new BMW();
-            bmw.Door();
+            bmw.Engine();
+            Car car = new BMW();
+            car.Door();
             bmw.SteerWheel();
             Animal.Eat();
             Tiger.Eat();
@@ -40,9 +42,9 @@ namespace Inheritance
             Console.WriteLine("BMW Steering Wheel captures the feel and spirit of the racetrack");
         }
 
-        public void Door()
+        public new void Door()
         {
-            return;
+            Console.WriteLine("I only have two doors");
         }
     }
 
